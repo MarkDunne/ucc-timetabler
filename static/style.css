@@ -1,0 +1,116 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+html, body
+{
+	color: #222;
+	text-align: center;
+}
+
+select
+{
+	margin-top: 25px;
+	width: 500px;
+}
+
+#programmes-form input
+{
+	display: block;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#modules-form
+{
+	text-align: left;
+	margin-top: 25px;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+form ul, form li
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+form div{
+	clear: both;
+	float: none;
+	padding: 5px;
+}
+
+form label{
+	clear: left;
+	display: block;
+	float: left;
+	text-align: right;
+	width: 50px;
+}
+
+form p{
+	display: inline;
+	margin-left: 10px;
+}
+
+form input[type='checkbox']{
+	clear: right;
+	float: left;
+	margin-left: 10px;
+}
+
+#modules-form ul li:nth-child(2n)
+{
+	background-color: #eee;
+}
+
+#controls
+{
+	margin-top:10px;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#controls button
+{
+	width: 33%;
+}
+
+#footer
+{
+	font-size: 1.2em;
+	color: #eee;
+	width: 100%;
+	line-height: 100px;
+	background-color: #222;	
+	position: absolute;
+	bottom: 0px;
+}
+
+#footer p
+{
+	vertical-align: middle;
+}
+
+#footer a:hover
+{
+	color: #00bbee;
+	text-decoration: none;
+}
+
+
+.loading
+{
+	width: 30px;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url('/static/loading.gif');
+}

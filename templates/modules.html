@@ -1,0 +1,20 @@
+<h2>Select your modules</h3>
+<form id='modules-form'>
+	<ul>
+		{% for module in modules %}
+		<li>
+			<div>
+				<label for='{{ module.0 }}' class='code'>{{ module.0 }}</label>
+				<input type='checkbox' name='module' value='{{ module.0 }}'/>
+				<p class='desc'>{{ module.1 }}</p>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+	<input type='hidden' name='programme_code' value= '{{ programme_code }}'/>
+	<div id='controls' class='btn-group'>
+		<button class='btn btn-primary' id='submit'>Send To Calander</button>
+		<button class='btn btn-success' id='select-all'>Select All</button>
+		<button class='btn btn-success' id='select-none'>Select None</button>
+	</div>	
+</form>
