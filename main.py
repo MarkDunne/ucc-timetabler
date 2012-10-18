@@ -7,12 +7,11 @@ from urllib import urlencode as encode
 from google.appengine.api import urlfetch
 from google.appengine.ext.webapp import template
 
-client_id = '338132796157.apps.googleusercontent.com'
-client_secret = '-NbOc_ZrFcT_2RsJoDgz0vQA'
+client_id = '<Your Client ID>'
+client_secret = '<Your Client Secret>'
 calander_name = 'My Ucc Timetable'
 
-#redirect_uri = 'http://localhost:8080/auth'
-redirect_uri = 'http://ucc-timetabler.appspot.com/auth'
+redirect_uri = 'http://localhost:8080/auth'
 
 dayOffsets = {'Mo': 0, 'Tu': 1, 'We': 2, 'Th': 3, 'Fr': 4}
 timeBlocks = {0:'080000', 1:'083000', 2:'090000', 3:'093000', 4:'100000', 5:'103000', 6:'110000', 7:'113000', 8:'120000', 9:'123000', 10:'130000', 11:'133000', 12:'140000', 13:'143000', 14:'150000', 15:'153000', 16:'160000', 17:'163000', 18:'170000', 19:'173000', 20:'180000', 21:'183000', 22:'190000', 23:'193000', 24:'200000', 25:'203000'} 
@@ -254,11 +253,6 @@ class FinalizeHandler(webapp2.RequestHandler):
 				self.response.out.write(template.render('templates/error.html', {'error': error}))
 		else:
 			self.response.out.write(template.render('templates/error.html', {}))
-
-#only link this when debugging
-class ClearHandler(webapp2.RequestHandler):
-	def get(self):
-		self.response.out.write(db.delete(db.Query(keys_only=True)))
 
 app = webapp2.WSGIApplication([('/', MainHandler),
 							   ('/auth', AuthHandler),
