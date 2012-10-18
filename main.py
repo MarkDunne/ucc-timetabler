@@ -255,6 +255,6 @@ class FinalizeHandler(webapp2.RequestHandler):
 			self.response.out.write(template.render('templates/error.html', {}))
 
 app = webapp2.WSGIApplication([('/', MainHandler),
-							   ('/auth', AuthHandler),
-							   ('/select_modules', ModuleHandler),
-							   ('/finalize', FinalizeHandler)])
+			       ('/auth', AuthHandler),
+			       ('/select_modules', ModuleHandler),
+			       ('/finalize', FinalizeHandler)])
