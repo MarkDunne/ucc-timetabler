@@ -1,5 +1,4 @@
 UCC Timetabler
-
 ==============
 
 This is a web application made to take timetables from University College Cork and put them automatically into your Google Calander. It is built to run on a Google AppEngine server
